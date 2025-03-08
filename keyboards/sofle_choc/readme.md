@@ -6,9 +6,9 @@ The Sofle Choc is 6×4+5 keys column-staggered split keyboard. Based on Lily58, 
 
 More details about the keyboard and build guide: [Sofle Choc Build GUide](https://josefadamcik.github.io/SofleKeyboard/build_guide_choc.html)
 
-* Keyboard Maintainer: [Brian Low](https://github.com/brianlow/)
-* Hardware Supported: Sofle Choc PCB 2.x, ProMicro
-* Hardware Availability: [PCB & Case Data](https://github.com/josefadamcik/SofleKeyboard)
+- Keyboard Maintainer: [Brian Low](https://github.com/brianlow/)
+- Hardware Supported: Sofle Choc PCB 2.x, ProMicro
+- Hardware Availability: [PCB & Case Data](https://github.com/josefadamcik/SofleKeyboard)
 
 Make example for this keyboard (after setting up your build environment):
 
@@ -23,3 +23,13 @@ Press reset button twice on the keyboard when asked.
 Disconnect the first half, connect the second one and repeat the process.
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+
+## For elite-pi build
+
+Build the firmware with the following command:
+
+    qmk compile -kb sofle_choc -km jepomeroy -e CONVERT_TO=elite_pi
+
+Plug in each half of the keyboard and copy the firmware to the root of the mounted pi with the following command:
+
+    cp .build/sofle_choc_jepomeroy_elite_pi.uf2  <mount point of the elite-pi>
